@@ -1,4 +1,28 @@
-# SEIRS+ Model
+# SEIRS+ Model with testing policies
+
+This is a companion code for the paper "Optimizing testing policies for detecting COVID-19 within institutions" 
+by Boaz Barak, Mor Nitzan, Neta Ravid Tannenbaum, and Janni Yuval.
+
+This is a fork of the [SIER plus](https://github.com/ryansmcgee/seirsplus) repository.
+We update  `SEIRSNetworkModel` with the following additional parameters:
+
+* `p_extern`: Rate of spontanous (external) infection
+* `p_periodic`: fraction of people tested in a periodic subsample tests
+*  `period`: Period for periodic testing
+* `batch`: Test people in batch, i.e. without repetition (True) or test each person with probability p_periodic  independently per period (False)
+*  `min_time`: Minimum time to pass between two tests for the same individual
+*  `count_non_random`: Count tests done to symptomatic or traced people
+*  `stopping`: function for stopping policy '1st' means stop at first detection
+*  `policy`: policy function for adaptive policies
+* `policyInterval`: period to apply policy function
+* `runTillEnd`: True - don't stop even if zero infections (makes sense when external infections > 0),
+* `test_recovered`: Test people in "recovered" state - makes sense when we stop at first detection, not so much otherwise
+*  `initT`: Initial time step
+
+Our code can be found in the `testing_policies` directory.
+
+
+# Original readme file
 
 This package implements generalized SEIRS infectious disease dynamics models with extensions that model the effect of factors including population structure, social distancing, testing, contact tracing, and quarantining detected cases. 
 
