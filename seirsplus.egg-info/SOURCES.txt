@@ -5,6 +5,7 @@ seirsplus/__init__.py
 seirsplus/legacy_models.py
 seirsplus/models.py
 seirsplus/networks.py
+seirsplus/parallel_run.py
 seirsplus/sim_loops.py
 seirsplus/utilities.py
 seirsplus.egg-info/PKG-INFO
