@@ -189,6 +189,8 @@ try:
             ax.set_title(title)
         plt.show()
 
+        return fig
+
 
     def show_violins(data, field, groupby = 'variant', ylabel=None,title="", key = None):
         """Show 'violin graphs' of a certain field according to different variants"""
@@ -199,7 +201,7 @@ try:
         for v in sorted(data[groupby].unique(), key=key):
             plots.append(data[data[groupby] == v][field])
             labels.append(v)
-        violin_plot(plots, labels, ylabel=ylabel, title=title)
+        return violin_plot(plots, labels, ylabel=ylabel, title=title)
 
 
 except ImportError:
