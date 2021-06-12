@@ -1,3 +1,8 @@
+This is a fork of [the SEIRS+ package](https://github.com/boazbk/seirsplus) by Boaz Barak.
+
+In this project, we study how a fixed number of tests should be distributed for early detection of an outbreak. Our analysis is based on an extended network-SEIR model, where the network structures are captured by different random graph models, such as Erd\"{o}s–R\'{e}nyi, Gaussian random partition, Barab\'{a}si-Albert and Watts-Strogatz model. Generally, it is better to test smaller subgroups of the population frequently than testing the entire population less frequently, which is shown to be true in our numerical simulations.
+
+# SEIRS + Model Framework + parallel_run
 
 This is a fork of [the SEIRS+ package](https://github.com/ryansmcgee/seirsplus) by Ryan Seamus McGee.
 
